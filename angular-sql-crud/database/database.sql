@@ -1,0 +1,49 @@
+CREATE DATABASE fiusac_portal;
+
+USE fiusac_portal;
+
+CREATE TABLE Usuario(
+  Carnet INT NOT NULL PRIMARY KEY,
+  Nombres VARCHAR(45) NOT NULL,
+  Apellidos VARCHAR(45) NOT NULL,
+  Contraseña VARCHAR(45) NOT NULL,
+  Correo VARCHAR(45) NOT NULL  
+);
+
+CREATE TABLE Comentario(
+  idComentario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Mensaje VARCHAR(100) NOT NULL  
+);
+
+CREATE TABLE CursosAprobados(
+  NotaAprobada INT NOT NULL
+);
+
+CREATE TABLE PensusSistemas(
+  idCursoPensum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Creditos INT NOT NULL,
+  Semestre INT NOT NULL
+);
+
+CREATE TABLE Curso(
+  idCurso INT NOT NULL PRIMARY KEY,
+  Nombre VARCHAR(45)
+);
+
+CREATE TABLE CursoCatedratico(
+  idCatedraticoCurso INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+
+CREATE TABLE Catedratico(
+  idCatedratico INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(45) NOT NULL,
+  Apellidos VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE Publicacion(
+  idPublicacion INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Mensaje VARCHAR(100) NOT NULL,
+  Fecha DATE NULL,
+  Tipo INT NOT NULL
+);
+
